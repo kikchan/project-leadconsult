@@ -6,3 +6,11 @@ C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debu
 C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.CoreCompileInputs.cache
 C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.dll
 C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.pdb
+C:\Dev 2\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.deps.json
+C:\Dev 2\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.dll
+C:\Dev 2\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.pdb
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.AssemblyInfoInputs.cache
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.AssemblyInfo.cs
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.CoreCompileInputs.cache
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.dll
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.pdb
