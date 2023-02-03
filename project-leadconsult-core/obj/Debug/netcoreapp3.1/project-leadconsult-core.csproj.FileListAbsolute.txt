@@ -1,0 +1,8 @@
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.deps.json
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.dll
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\bin\Debug\netcoreapp3.1\project-leadconsult-core.pdb
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.AssemblyInfoInputs.cache
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.AssemblyInfo.cs
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.CoreCompileInputs.cache
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.dll
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.pdb

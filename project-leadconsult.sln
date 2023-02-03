@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project-leadconsult-console", "project-leadconsult-console\project-leadconsult-console.csproj", "{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project-leadconsult-core", "project-leadconsult-core\project-leadconsult-core.csproj", "{47653378-8590-442C-B91F-42C52630B5F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47653378-8590-442C-B91F-42C52630B5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47653378-8590-442C-B91F-42C52630B5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47653378-8590-442C-B91F-42C52630B5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47653378-8590-442C-B91F-42C52630B5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41861746-04DE-4AAE-9098-B533C0CD8E09}
+	EndGlobalSection
+EndGlobal

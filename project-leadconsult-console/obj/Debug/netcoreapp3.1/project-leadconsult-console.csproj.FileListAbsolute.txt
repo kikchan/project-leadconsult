@@ -1,0 +1,13 @@
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.exe
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.deps.json
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.runtimeconfig.json
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.runtimeconfig.dev.json
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.dll
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-console.pdb
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.csproj.AssemblyReference.cache
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.AssemblyInfoInputs.cache
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.AssemblyInfo.cs
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.csproj.CoreCompileInputs.cache
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.dll
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.pdb
+C:\Users\Omen\source\repos\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.genruntimeconfig.cache
