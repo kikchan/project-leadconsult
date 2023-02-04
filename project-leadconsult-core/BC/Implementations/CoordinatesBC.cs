@@ -3,7 +3,6 @@ using project_leadconsult_core.Utils;
 using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -44,6 +43,17 @@ namespace project_leadconsult_core.BC
                     {
                         response.Response = Enums.ResponseStatuses.OK;
                         response.FurthestPointsFromCenter = furthestPointsFromCenter;
+
+                        if (request.Target.ToLower() != Literals.Console)
+                        {
+                            using (TextWriter tw = new StreamWriter(request.Target))
+                            {
+                                foreach (Point p in response.FurthestPointsFromCenter)
+                                {
+                                    tw.WriteLine($"Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
+                                }
+                            }
+                        }
                     }
                     else
                     {

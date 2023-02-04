@@ -74,6 +74,11 @@ namespace project_leadconsult
                                     Console.WriteLine($"\t- Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
                                 }
                             }
+                            else
+                            {
+                                Console.Write(Literals.GeneratedFile);
+                                Console.WriteLine(processFileRequest.Target);
+                            }
                         }
 
                         // Log output

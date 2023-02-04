@@ -136,6 +136,9 @@
   <data name="FurthestPoints" xml:space="preserve">
     <value>These are the furthest points from the center (0, 0):</value>
   </data>
+  <data name="GeneratedFile" xml:space="preserve">
+    <value>File successfully generated in: </value>
+  </data>
   <data name="InvalidParameter" xml:space="preserve">
     <value>You must pass by parameter the name of the text file that you want to process and the desired output. 
 For example:

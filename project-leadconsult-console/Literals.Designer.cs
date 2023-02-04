@@ -116,6 +116,15 @@ namespace project_leadconsult {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File successfully generated in: .
+        /// </summary>
+        internal static string GeneratedFile {
+            get {
+                return ResourceManager.GetString("GeneratedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must pass by parameter the name of the text file that you want to process and the desired output. 
         ///For example:
         ///.
