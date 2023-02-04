@@ -30,6 +30,15 @@ namespace project_leadconsult_core_tests
         private Guid CorrelationID;
 
         /// <summary>
+        /// Classes the cleaup.
+        /// </summary>
+        [ClassCleanup]
+        public static void ClassCleaup()
+        {
+            Log.CloseAndFlush();
+        }
+
+        /// <summary>
         /// Classes the setup.
         /// </summary>
         /// <param name="testContext">The test context.</param>
@@ -41,39 +50,15 @@ namespace project_leadconsult_core_tests
             .CreateLogger();
         }
 
-        [ClassCleanup]
-        public static void ClassCleaup()
-        {
-            Log.CloseAndFlush();
-        }
-
         /// <summary>
-        /// Tests the ok.
+        /// Tests the ko empty file.
         /// </summary>
         [TestMethod]
-        public void TestOK()
+        public void TestKOEmptyFile()
         {
             ProcessFileRequest processFileRequest = new ProcessFileRequest(this.CorrelationID)
             {
-                FileName = Path.Combine(DataFolder, "coordinatesOK.txt"),
-                Target = "out.txt"
-            };
-
-            ProcessFileResponse processFileResponse = bc.ProcessFile(processFileRequest);
-
-            Assert.AreEqual(ResponseStatuses.OK, processFileResponse.Response);
-            Assert.AreEqual(5, processFileResponse.FurthestPointsFromCenter.Count);
-        }
-
-        /// <summary>
-        /// Tests the missing y.
-        /// </summary>
-        [TestMethod]
-        public void TestKOMissingY()
-        {
-            ProcessFileRequest processFileRequest = new ProcessFileRequest(this.CorrelationID)
-            {
-                FileName = Path.Combine(DataFolder, "coordinatesKO(missing Y).txt"),
+                FileName = Path.Combine(DataFolder, "coordinatesKOEmptyFile.txt"),
                 Target = "out.txt"
             };
 
@@ -85,14 +70,33 @@ namespace project_leadconsult_core_tests
         }
 
         /// <summary>
-        /// Tests the ko empty file.
+        /// Tests the ko file does not exist.
         /// </summary>
         [TestMethod]
-        public void TestKOEmptyFile()
+        public void TestKOFileDoesNotExist()
         {
             ProcessFileRequest processFileRequest = new ProcessFileRequest(this.CorrelationID)
             {
-                FileName = Path.Combine(DataFolder, "coordinatesKOEmptyFile.txt"),
+                FileName = Path.Combine(DataFolder, "coordinatesKONonExistantFile.txt"),
+                Target = "out.txt"
+            };
+
+            ProcessFileResponse processFileResponse = bc.ProcessFile(processFileRequest);
+
+            Assert.AreEqual(ResponseStatuses.FileDoesntExist, processFileResponse.Response);
+            Assert.AreEqual(ResponseStatuses.FileDoesntExist.ToString(), processFileResponse.ResponseMessage);
+            Assert.IsNull(processFileResponse.FurthestPointsFromCenter);
+        }
+
+        /// <summary>
+        /// Tests the missing y.
+        /// </summary>
+        [TestMethod]
+        public void TestKOMissingY()
+        {
+            ProcessFileRequest processFileRequest = new ProcessFileRequest(this.CorrelationID)
+            {
+                FileName = Path.Combine(DataFolder, "coordinatesKO(missing Y).txt"),
                 Target = "out.txt"
             };
 
@@ -122,20 +126,22 @@ namespace project_leadconsult_core_tests
             Assert.IsNull(processFileResponse.FurthestPointsFromCenter);
         }
 
+        /// <summary>
+        /// Tests the ok.
+        /// </summary>
         [TestMethod]
-        public void TestKOFileDoesNotExist()
+        public void TestOK()
         {
             ProcessFileRequest processFileRequest = new ProcessFileRequest(this.CorrelationID)
             {
-                FileName = Path.Combine(DataFolder, "coordinatesKONonExistantFile.txt"),
+                FileName = Path.Combine(DataFolder, "coordinatesOK.txt"),
                 Target = "out.txt"
             };
 
             ProcessFileResponse processFileResponse = bc.ProcessFile(processFileRequest);
 
-            Assert.AreEqual(ResponseStatuses.FileDoesntExist, processFileResponse.Response);
-            Assert.AreEqual(ResponseStatuses.FileDoesntExist.ToString(), processFileResponse.ResponseMessage);
-            Assert.IsNull(processFileResponse.FurthestPointsFromCenter);
+            Assert.AreEqual(ResponseStatuses.OK, processFileResponse.Response);
+            Assert.AreEqual(5, processFileResponse.FurthestPointsFromCenter.Count);
         }
 
         /// <summary>
