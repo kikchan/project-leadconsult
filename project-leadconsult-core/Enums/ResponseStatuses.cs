@@ -28,6 +28,11 @@
         /// <summary>
         /// The no data found
         /// </summary>
-        NoDataFound = -4
+        NoDataFound = -4,
+
+        /// <summary>
+        /// The file doesnt exist
+        /// </summary>
+        FileDoesntExist = -6
     }
 }

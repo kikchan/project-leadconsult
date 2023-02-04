@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CantParse" xml:space="preserve">
-    <value>Can't parse the line</value>
+    <value>Can't parse the line: </value>
   </data>
   <data name="Console" xml:space="preserve">
     <value>console</value>

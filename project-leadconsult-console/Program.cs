@@ -9,7 +9,7 @@ namespace project_leadconsult
     /// <summary>
     /// Program
     /// </summary>
-    internal class Program
+    internal static class Program
     {
         #region Fields
 
@@ -51,38 +51,32 @@ namespace project_leadconsult
 
                 if (args != null && args.Length == 2)
                 {
-                    if (System.IO.File.Exists(args[0]))
+                    Console.WriteLine(string.Concat(Literals.Processing, ": ", args[0]));
+
+                    ProcessFileRequest processFileRequest = new ProcessFileRequest(CorrelationID)
                     {
-                        Console.WriteLine(string.Concat(Literals.Processing, ": ", args[0]));
+                        FileName = args[0],
+                        Target = args[1]
+                    };
 
-                        ProcessFileRequest processFileRequest = new ProcessFileRequest(CorrelationID)
+                    ProcessFileResponse processFileResponse = coordinatesBC.ProcessFile(processFileRequest);
+
+                    if (processFileResponse.Response == project_leadconsult_core.Enums.ResponseStatuses.OK)
+                    {
+                        if (args[1].ToLower() == Literals.Console)
                         {
-                            FileName = args[0],
-                            Target = args[1]
-                        };
+                            Console.WriteLine(Literals.FurthestPoints);
 
-                        ProcessFileResponse processFileResponse = coordinatesBC.ProcessFile(processFileRequest);
-
-                        if (processFileResponse.Response == project_leadconsult_core.Enums.ResponseStatuses.OK)
-                        {
-                            if (args[1].ToLower() == Literals.Console)
+                            foreach (Point p in processFileResponse.FurthestPointsFromCenter)
                             {
-                                Console.WriteLine(Literals.FurthestPoints);
-
-                                foreach (Point p in processFileResponse.FurthestPointsFromCenter)
-                                {
-                                    Console.WriteLine($"\t- Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
-                                }
-                            }
-                            else
-                            {
-                                Console.Write(Literals.GeneratedFile);
-                                Console.WriteLine(processFileRequest.Target);
+                                Console.WriteLine($"\t- Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
                             }
                         }
-
-                        // Log output
-                        SerilogLogger.TraceLogOut(CorrelationID, processFileResponse.Response);
+                        else
+                        {
+                            Console.Write(Literals.GeneratedFile);
+                            Console.WriteLine(processFileRequest.Target);
+                        }
                     }
                     else
                     {
@@ -91,6 +85,9 @@ namespace project_leadconsult
                         // Log error
                         SerilogLogger.TraceError(CorrelationID, Literals.FileNotExists);
                     }
+
+                    // Log output
+                    SerilogLogger.TraceLogOut(CorrelationID, processFileResponse.Response);
                 }
                 else
                 {

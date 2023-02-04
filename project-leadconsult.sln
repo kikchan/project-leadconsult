@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project-leadconsult-console", "project-leadconsult-console\project-leadconsult-console.csproj", "{2F4B51E2-B6D7-4F17-9419-4A3E5E0E1A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project-leadconsult-core", "project-leadconsult-core\project-leadconsult-core.csproj", "{47653378-8590-442C-B91F-42C52630B5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project-leadconsult-core", "project-leadconsult-core\project-leadconsult-core.csproj", "{47653378-8590-442C-B91F-42C52630B5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project-leadconsult-core-tests", "project-leadconsult-core-tests\project-leadconsult-core-tests.csproj", "{3EFF432F-76C7-4C5B-9EA4-1D14A5622C7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{47653378-8590-442C-B91F-42C52630B5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47653378-8590-442C-B91F-42C52630B5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47653378-8590-442C-B91F-42C52630B5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFF432F-76C7-4C5B-9EA4-1D14A5622C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFF432F-76C7-4C5B-9EA4-1D14A5622C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFF432F-76C7-4C5B-9EA4-1D14A5622C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFF432F-76C7-4C5B-9EA4-1D14A5622C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

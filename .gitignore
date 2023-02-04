@@ -1,5 +1,8 @@
 .vs
+.sonarqube
 project-leadconsult-console/bin
 project-leadconsult-console/obj
 project-leadconsult-core/bin
 project-leadconsult-core/obj
+project-leadconsult-core-tests/bin
+project-leadconsult-core-tests/obj

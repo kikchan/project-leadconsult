@@ -19,9 +19,9 @@ namespace project_leadconsult_core.BE
         /// <exception cref="System.InvalidProgramException">CorrelationID can't be null or empty!</exception>
         public BaseRequest(Guid correlationID)
         {
-            if (correlationID == null || correlationID == Guid.Empty)
+            if (correlationID == Guid.Empty)
             {
-                throw new InvalidProgramException("CorrelationID can't be null or empty!");
+                throw new InvalidProgramException("CorrelationID can't be empty!");
             }
 
             CorrelationID = correlationID;

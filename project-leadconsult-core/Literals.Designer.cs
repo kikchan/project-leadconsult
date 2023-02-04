@@ -61,7 +61,7 @@ namespace project_leadconsult_core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Can&apos;t parse the line.
+        ///   Looks up a localized string similar to Can&apos;t parse the line: .
         /// </summary>
         internal static string CantParse {
             get {
