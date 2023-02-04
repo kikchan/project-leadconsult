@@ -1,5 +1,6 @@
 ﻿using project_leadconsult_core.BC;
 using project_leadconsult_core.BE;
+using project_leadconsult_core.Utils;
 using Serilog;
 using System;
 
@@ -45,11 +46,14 @@ namespace project_leadconsult
 
             try
             {
+                // Log input
+                SerilogLogger.TraceLogIn(CorrelationID, args);
+
                 if (args != null && args.Length == 2)
                 {
                     if (System.IO.File.Exists(args[0]))
                     {
-                        Console.WriteLine(args[0]);
+                        Console.WriteLine(string.Concat(Literals.Processing, ": ", args[0]));
 
                         ProcessFileRequest processFileRequest = new ProcessFileRequest(CorrelationID)
                         {
@@ -59,20 +63,28 @@ namespace project_leadconsult
 
                         ProcessFileResponse processFileResponse = coordinatesBC.ProcessFile(processFileRequest);
 
-                        if (args[1].ToLower() == Literals.Console)
+                        if (processFileResponse.Response == project_leadconsult_core.Enums.ResponseStatuses.OK)
                         {
-                            Console.WriteLine(Literals.FurthestPoints);
-
-                            foreach (Point p in processFileResponse.FurthestPointsFromCenter)
+                            if (args[1].ToLower() == Literals.Console)
                             {
-                                Console.WriteLine($"\t- Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
+                                Console.WriteLine(Literals.FurthestPoints);
+
+                                foreach (Point p in processFileResponse.FurthestPointsFromCenter)
+                                {
+                                    Console.WriteLine($"\t- Point{p.No}({p.Coordinates.X},{p.Coordinates.Y}) in {p.GetQuadrant()}");
+                                }
                             }
                         }
+
+                        // Log output
+                        SerilogLogger.TraceLogOut(CorrelationID, processFileResponse.Response);
                     }
                     else
                     {
                         Console.WriteLine(Literals.FileNotExists);
-                        Log.Error(Literals.FileNotExists);
+
+                        // Log error
+                        SerilogLogger.TraceError(CorrelationID, Literals.FileNotExists);
                     }
                 }
                 else
@@ -80,12 +92,17 @@ namespace project_leadconsult
                     Console.WriteLine(Literals.InvalidParameter);
                     Console.WriteLine(Literals.ExampleOfUsage1);
                     Console.WriteLine(Literals.ExampleOfUsage2);
-                    Log.Error(Literals.InvalidParameter);
+
+                    // Log error
+                    SerilogLogger.TraceError(CorrelationID, Literals.InvalidParameter);
                 }
             }
             catch (Exception ex)
             {
-                Log.Error(ex, Literals.Exception);
+                Console.WriteLine(Literals.Exception);
+
+                // Trace catch
+                SerilogLogger.TraceCatch(CorrelationID, ex);
             }
             finally
             {
@@ -93,7 +110,7 @@ namespace project_leadconsult
             }
 
             Console.WriteLine(Literals.PressAnyKeyToExit);
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

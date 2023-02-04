@@ -3,6 +3,7 @@ using project_leadconsult_core.Utils;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -32,7 +33,7 @@ namespace project_leadconsult_core.BC
             try
             {
                 // Log input
-                Log.Information("CorrelationID: {@CorrelationID}, In: {@o}", request.CorrelationID, request);
+                SerilogLogger.TraceLogIn(request.CorrelationID, request);
 
                 if (request != null)
                 {
@@ -61,11 +62,12 @@ namespace project_leadconsult_core.BC
                 response.Response = Enums.ResponseStatuses.Exception;
                 response.ResponseMessage = ex.Message;
 
-                Log.Error(ex.Message, request.CorrelationID);
+                // Trace catch
+                SerilogLogger.TraceCatch(request.CorrelationID, ex);
             }
 
             // Log output
-            Log.Information("CorrelationID: {@CorrelationID}, Out: {@o}", request.CorrelationID, response);
+            SerilogLogger.TraceLogOut(request.CorrelationID, response.Response);
 
             return response;
         }

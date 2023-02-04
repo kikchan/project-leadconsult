@@ -134,5 +134,14 @@ namespace project_leadconsult {
                 return ResourceManager.GetString("PressAnyKeyToExit", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Processing.
+        /// </summary>
+        internal static string Processing {
+            get {
+                return ResourceManager.GetString("Processing", resourceCulture);
+            }
+        }
     }
 }
