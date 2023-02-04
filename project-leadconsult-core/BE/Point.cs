@@ -6,27 +6,28 @@
     public class Point
     {
         /// <summary>
-        /// Gets or sets the coord axis x.
+        /// The coordinates
         /// </summary>
-        /// <value>
-        /// The coord axis x.
-        /// </value>
-        public int Coord_Axis_X { get; set; }
+        public readonly System.Drawing.Point Coordinates;
 
         /// <summary>
-        /// Gets or sets the coord axis y.
+        /// Gets or sets the number.
         /// </summary>
         /// <value>
-        /// The coord axis y.
+        /// The number.
         /// </value>
-        public int Coord_Axis_Y { get; set; }
+        public readonly int No;
 
         /// <summary>
-        /// Gets or sets the identifier.
+        /// Initializes a new instance of the <see cref="Point" /> class.
         /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
-        public string ID { get; set; }
+        /// <param name="no">The no.</param>
+        /// <param name="coord_Axis_X">The coord axis x.</param>
+        /// <param name="coord_Axis_Y">The coord axis y.</param>
+        public Point(int no, int coord_Axis_X, int coord_Axis_Y)
+        {
+            No = no;
+            Coordinates = new System.Drawing.Point(coord_Axis_X, coord_Axis_Y);
+        }
     }
 }

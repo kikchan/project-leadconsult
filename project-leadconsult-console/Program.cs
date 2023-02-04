@@ -1,4 +1,6 @@
-﻿using Serilog;
+﻿using project_leadconsult_core.BC;
+using project_leadconsult_core.Utils;
+using Serilog;
 using System;
 
 namespace project_leadconsult
@@ -6,43 +8,52 @@ namespace project_leadconsult
     /// <summary>
     /// Program
     /// </summary>
-    class Program
+    internal class Program
     {
+        /// <summary>
+        /// The coordinates bc
+        /// </summary>
+        static readonly ICoordinatesBC coordinatesBC;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="Program"/> class from being created.
         /// </summary>
-        Program()
+        static Program()
         {
             Log.Logger = new LoggerConfiguration().WriteTo.File("log-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+
+            coordinatesBC = new CoordinatesBC();
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             if (args != null && args.Length == 1)
             {
                 if (System.IO.File.Exists(args[0]))
                 {
-                    Log.Information("Hello World!");
+                    Console.WriteLine(args[0]);
+                    Log.Information(args[0]);
+
+                    coordinatesBC.ProcessFile(args[0]);
+
+                    //Literals.Point
                 }
                 else
                 {
-                    Console.WriteLine("The given file doesn't exist");
-                    Log.Error("The given file doesn't exist");
+                    Console.WriteLine(Literals.FileNotExists);
+                    Log.Error(Literals.FileNotExists);
                 }
             }
             else
             {
-                Console.WriteLine("You must pass by parameter the name of the text file that you want to process");
-                Log.Error("You must pass by parameter the name of the text file that you want to process");
+                Console.WriteLine(Literals.InvalidParameter);
+                Log.Error(Literals.InvalidParameter);
             }
 
             // Finally, once just before the application exits...
             Log.CloseAndFlush();
 
-            Console.WriteLine("\n\nPress any key to exit...");
+            Console.WriteLine(Literals.PressAnyKeyToExit);
             Console.ReadKey();
         }
     }

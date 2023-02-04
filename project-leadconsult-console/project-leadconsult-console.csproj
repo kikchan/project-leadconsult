@@ -12,4 +12,23 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\project-leadconsult-core\project-leadconsult-core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Literals.Designer.cs">
+      <DependentUpon>Literals.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Literals.resx">
+      <LastGenOutput>Literals.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

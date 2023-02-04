@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "project-leadconsult-console": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Dev 2\\project-leadconsult\\coordinates.txt\""
+    }
+  }
+}

@@ -28,3 +28,9 @@ C:\Dev 2\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1
 C:\Dev 2\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.genruntimeconfig.cache
 C:\Dev 2\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\Serilog.dll
 C:\Dev 2\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Dev 2\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Dev 2\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-core.dll
+C:\Dev 2\project-leadconsult\project-leadconsult-console\bin\Debug\netcoreapp3.1\project-leadconsult-core.pdb
+C:\Dev 2\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.csproj.AssemblyReference.cache
+C:\Dev 2\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project_leadconsult.Literals.resources
+C:\Dev 2\project-leadconsult\project-leadconsult-console\obj\Debug\netcoreapp3.1\project-leadconsult-console.csproj.GenerateResource.cache

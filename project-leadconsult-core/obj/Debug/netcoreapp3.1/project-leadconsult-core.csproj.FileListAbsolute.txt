@@ -14,3 +14,6 @@ C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\pr
 C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.CoreCompileInputs.cache
 C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.dll
 C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.pdb
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.AssemblyReference.cache
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project_leadconsult_core.Literals.resources
+C:\Dev 2\project-leadconsult\project-leadconsult-core\obj\Debug\netcoreapp3.1\project-leadconsult-core.csproj.GenerateResource.cache

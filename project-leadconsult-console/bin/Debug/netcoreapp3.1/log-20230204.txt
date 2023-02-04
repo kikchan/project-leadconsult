@@ -1,0 +1,14 @@
+2023-02-04 05:24:54.327 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 05:37:15.182 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 05:52:57.392 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 05:53:27.237 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:11:23.306 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:23:07.588 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:54:11.647 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:55:05.035 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:55:48.687 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:56:11.104 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:57:37.610 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:58:12.189 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:59:06.466 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
+2023-02-04 06:59:48.964 +01:00 [INF] C:\Dev 2\project-leadconsult\coordinates.txt
