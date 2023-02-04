@@ -120,4 +120,7 @@
   <data name="CantParse" xml:space="preserve">
     <value>Can't parse the line</value>
   </data>
+  <data name="Console" xml:space="preserve">
+    <value>console</value>
+  </data>
 </root>

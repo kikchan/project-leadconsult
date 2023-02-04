@@ -15,19 +15,66 @@ namespace project_leadconsult_core.BC
     /// <seealso cref="project_leadconsult_core.BC.ICoordinatesBC" />
     public class CoordinatesBC : ICoordinatesBC
     {
+        /// <summary>
+        /// The center
+        /// </summary>
         private readonly Point center = new Point(0, 0, 0);
 
         /// <summary>
         /// Processes the file.
         /// </summary>
-        /// <param name="filename">The filename.</param>
-        public void ProcessFile(string filename)
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public ProcessFileResponse ProcessFile(ProcessFileRequest request)
         {
-            List<Point> points = ReadFile(filename);
-            List<Point> furthestPointsFromCenter = CalculateFurthestPointsFromCenter(points);
-            
+            ProcessFileResponse response = new ProcessFileResponse();
+
+            try
+            {
+                // Log input
+                Log.Information("CorrelationID: {@CorrelationID}, In: {@o}", request.CorrelationID, request);
+
+                if (request != null)
+                {
+                    List<Point> points = ReadFile(request.FileName);
+                    List<Point> furthestPointsFromCenter = CalculateFurthestPointsFromCenter(points);
+
+                    if (furthestPointsFromCenter != null && furthestPointsFromCenter.Count > 0)
+                    {
+                        response.Response = Enums.ResponseStatuses.OK;
+                        response.FurthestPointsFromCenter = furthestPointsFromCenter;
+                    }
+                    else
+                    {
+                        response.Response = Enums.ResponseStatuses.NoDataFound;
+                        response.ResponseMessage = Enums.ResponseStatuses.NoDataFound.ToString();
+                    }
+                }
+                else
+                {
+                    response.Response = Enums.ResponseStatuses.NullRequest;
+                    response.ResponseMessage = Enums.ResponseStatuses.NullRequest.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Response = Enums.ResponseStatuses.Exception;
+                response.ResponseMessage = ex.Message;
+
+                Log.Error(ex.Message, request.CorrelationID);
+            }
+
+            // Log output
+            Log.Information("CorrelationID: {@CorrelationID}, Out: {@o}", request.CorrelationID, response);
+
+            return response;
         }
 
+        /// <summary>
+        /// Calculates the furthest points from center.
+        /// </summary>
+        /// <param name="points">The points.</param>
+        /// <returns></returns>
         private List<Point> CalculateFurthestPointsFromCenter(List<Point> points)
         {
             List<PointDistance> results = new List<PointDistance>();
@@ -44,10 +91,11 @@ namespace project_leadconsult_core.BC
             }
 
             results = results.OrderByDescending(x => x.Distance).ToList();
-            int takeNElements = 0;
 
             if (results.Count > 1)
             {
+                int takeNElements = 1;
+
                 for (int i = 0; i < results.Count; i++)
                 {
                     if (results[i].Distance == results[i + 1].Distance)
@@ -59,10 +107,11 @@ namespace project_leadconsult_core.BC
                         break;
                     }
                 }
+
+                results = results.Take(takeNElements).OrderBy(x => x.Point.No).ToList();
             }
 
-            //return results.OrderByDescending(x => x.Distance).Select(x => x.Point).ToList();
-            return results.Take(takeNElements).Select(x => x.Point).ToList().OrderBy(x => x.No).ToList();
+            return results.Select(x => x.Point).ToList();
         }
 
         /// <summary>

@@ -68,5 +68,14 @@ namespace project_leadconsult_core {
                 return ResourceManager.GetString("CantParse", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to console.
+        /// </summary>
+        internal static string Console {
+            get {
+                return ResourceManager.GetString("Console", resourceCulture);
+            }
+        }
     }
 }

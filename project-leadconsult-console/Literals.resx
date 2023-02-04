@@ -117,11 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Console" xml:space="preserve">
+    <value>console</value>
+  </data>
+  <data name="ExampleOfUsage1" xml:space="preserve">
+    <value>- project-leadconsult-console.exe "data.txt" "console"</value>
+  </data>
+  <data name="ExampleOfUsage2" xml:space="preserve">
+    <value>- project-leadconsult-console.exe "data.txt" "data-output.txt"
+</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
   <data name="FileNotExists" xml:space="preserve">
     <value>The given file doesn't exist</value>
   </data>
+  <data name="FurthestPoints" xml:space="preserve">
+    <value>These are the furthest points from the center (0, 0):</value>
+  </data>
   <data name="InvalidParameter" xml:space="preserve">
-    <value>You must pass by parameter the name of the text file that you want to process</value>
+    <value>You must pass by parameter the name of the text file that you want to process and the desired output. 
+For example:
+</value>
   </data>
   <data name="PressAnyKeyToExit" xml:space="preserve">
     <value>Press any key to exit...</value>

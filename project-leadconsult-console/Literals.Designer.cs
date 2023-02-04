@@ -61,6 +61,43 @@ namespace project_leadconsult {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to console.
+        /// </summary>
+        internal static string Console {
+            get {
+                return ResourceManager.GetString("Console", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - project-leadconsult-console.exe &quot;data.txt&quot; &quot;console&quot;.
+        /// </summary>
+        internal static string ExampleOfUsage1 {
+            get {
+                return ResourceManager.GetString("ExampleOfUsage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - project-leadconsult-console.exe &quot;data.txt&quot; &quot;data-output.txt&quot;
+        ///.
+        /// </summary>
+        internal static string ExampleOfUsage2 {
+            get {
+                return ResourceManager.GetString("ExampleOfUsage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong.
+        /// </summary>
+        internal static string Exception {
+            get {
+                return ResourceManager.GetString("Exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The given file doesn&apos;t exist.
         /// </summary>
         internal static string FileNotExists {
@@ -70,7 +107,18 @@ namespace project_leadconsult {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must pass by parameter the name of the text file that you want to process.
+        ///   Looks up a localized string similar to These are the furthest points from the center (0, 0):.
+        /// </summary>
+        internal static string FurthestPoints {
+            get {
+                return ResourceManager.GetString("FurthestPoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must pass by parameter the name of the text file that you want to process and the desired output. 
+        ///For example:
+        ///.
         /// </summary>
         internal static string InvalidParameter {
             get {

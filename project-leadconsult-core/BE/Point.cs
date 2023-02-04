@@ -29,5 +29,37 @@
             No = no;
             Coordinates = new System.Drawing.Point(coord_Axis_X, coord_Axis_Y);
         }
+
+        /// <summary>
+        /// Gets the quadrant.
+        /// </summary>
+        /// <returns></returns>
+        public string GetQuadrant()
+        {
+            string result = string.Empty;
+
+            if (Coordinates.X == 0 && Coordinates.Y == 0)
+            {
+                result = "Origin";
+            }
+            else if (Coordinates.X >= 0 && Coordinates.Y >= 0)
+            {
+                result = "Quadrant I";
+            }
+            else if (Coordinates.X <= 0 && Coordinates.Y >= 0)
+            {
+                result = "Quadrant II";
+            }
+            else if (Coordinates.X <= 0 && Coordinates.Y <= 0)
+            {
+                result = "Quadrant III";
+            }
+            else if (Coordinates.X >= 0 && Coordinates.Y <= 0)
+            {
+                result = "Quadrant IV";
+            }
+
+            return result;
+        }
     }
 }
